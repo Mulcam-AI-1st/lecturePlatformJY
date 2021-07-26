@@ -8,8 +8,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class MainController {
   @RequestMapping(value = "/")
   public ModelAndView main() {
-    ModelAndView mav = new ModelAndView("/");
-    mav.addObject("page", "home");
+    ModelAndView mav = new ModelAndView("home");
+    // mav.addObject("page", "home");
     return mav;
   }
 }

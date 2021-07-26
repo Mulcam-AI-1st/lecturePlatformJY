@@ -13,6 +13,7 @@ import com.mulcam.lec.service.MemberService;
 import com.mulcam.lec.vo.Member;
 
 @Controller
+@RequestMapping("/member") // url붙여주는
 public class MemberControllerImpl implements MemberController {
   @Autowired
   MemberService memberService;
@@ -20,19 +21,19 @@ public class MemberControllerImpl implements MemberController {
   @RequestMapping(value = "/login")
   public ModelAndView login() {
     ModelAndView mav = new ModelAndView("main");
-    mav.addObject("page", "login_form");
+    mav.addObject("page", "/loginForm"); // views
     return mav;
   }
 
   @RequestMapping(value = "/login", method = RequestMethod.POST)
   public ModelAndView login(@RequestParam("id") String id,
       @RequestParam("password") String password, HttpServletRequest request) {
-    ModelAndView mav = new ModelAndView("main");
+    ModelAndView mav = new ModelAndView("home");
     try {
       memberService.login(id, password);
       HttpSession session = request.getSession();
       session.setAttribute("id", id);
-      mav.addObject("page", "makeaccount_form");
+      mav.addObject("page", "/home");
     } catch (Exception e) {
       e.printStackTrace();
       mav.addObject("err", e.getMessage());
@@ -43,17 +44,17 @@ public class MemberControllerImpl implements MemberController {
 
   @RequestMapping(value = "/logout")
   public ModelAndView logout(HttpServletRequest request) {
-    ModelAndView mav = new ModelAndView("main");
+    ModelAndView mav = new ModelAndView("home");
     HttpSession session = request.getSession();
     session.removeAttribute("id");
-    mav.addObject("page", "login_form");
+    mav.addObject("page", "home");
     return mav;
   }
 
   @RequestMapping(value = "/join")
   public ModelAndView join() {
     ModelAndView mav = new ModelAndView("main");
-    mav.addObject("page", "join_form");
+    mav.addObject("page", "joinForm");
     return mav;
   }
 
@@ -62,7 +63,7 @@ public class MemberControllerImpl implements MemberController {
     ModelAndView mav = new ModelAndView("main");
     try {
       memberService.join(member);
-      mav.addObject("page", "makeaccount_form");
+      mav.addObject("page", "home");
     } catch (Exception e) {
       e.printStackTrace();
       mav.addObject("err", e.getMessage());
