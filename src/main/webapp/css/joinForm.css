@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1,
+h3 {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+h4,
+h5 {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+
+h5 {
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+}
+
+button {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  background: white;
+  transition: 0.7s;
+}
+
+button:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+hr {
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+/* start */
+
+.join {
+  clear: both;
+  padding: 50px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.join h3 {
+  text-align: center;
+  margin: 18px;
+  margin-left: 270px;
+  text-align: left;
+}
+
+.join form {
+  margin: 0 auto;
+}
+
+.join form input {
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: #ddd;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 300px;
+}
+
+.submit button {
+  margin: 0 auto;
+  padding: 10px;
+  background: #444;
+  color: #fff;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 300px;
+}
+
+.submit button:hover {
+  background: none;
+  border: 1px solid #222;
+  color: #333;
+}

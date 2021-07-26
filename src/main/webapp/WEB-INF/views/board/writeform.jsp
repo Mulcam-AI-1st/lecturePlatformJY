@@ -53,6 +53,14 @@ table {
 					<td class="td_right"><input name="BOARD_SUBJECT" type="text"
 						id="BOARD_SUBJECT" required="required" /></td>
 				</tr>
+				
+				
+			<div>
+				<label for="BOARD_GRADE"> 
+				<input type="radio" name="sex" value="1" id="1" checked>불만족 1점
+					<input type="radio" name="sex" value="female">여자 
+			</div>
+			
 				<tr>
 					<td class="td_left"><label for="BOARD_CONTENT">내 용</label></td>
 					<td><textarea id="BOARD_CONTENT" name="BOARD_CONTENT"
