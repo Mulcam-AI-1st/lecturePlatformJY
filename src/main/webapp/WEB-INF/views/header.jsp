@@ -11,6 +11,7 @@
   rel="stylesheet"
 />
 <link rel="stylesheet" href="../css/header.css" />
+<script src="../js/header.js" defer></script>
 <script
   src="https://kit.fontawesome.com/9eb162ac0d.js"
   crossorigin="anonymous"
