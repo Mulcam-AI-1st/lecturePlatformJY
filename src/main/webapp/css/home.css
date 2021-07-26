@@ -118,7 +118,7 @@ p {
 
 /* Home */
 #home {
-  background: center/cover no-repeat url("imgs/배너\ 소책자\ 210521.jpg");
+  background: center/cover no-repeat url("/fileview/homeBook.jpg");
   width: 100%;
   padding: 40px;
   padding-top: 250px;

@@ -100,7 +100,7 @@
       <div class="work__projects">
         <a href="" class="project" target="blank" data-type="front-end">
           <img
-            src="imgs/lectures/타이틀2.jpg"
+            src="/fileview/homeBook.jpg"
             alt="Youtube"
             class="project__img"
           />
