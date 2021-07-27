@@ -18,17 +18,18 @@ public class MemberControllerImpl implements MemberController {
   @Autowired
   MemberService memberService;
 
-  @RequestMapping(value = "/login")
+  @RequestMapping(value = "/login") // 브라우저 url 사용시: /member/login == a 태그
   public ModelAndView login() {
-    ModelAndView mav = new ModelAndView("main");
-    mav.addObject("page", "/loginForm"); // views
+    ModelAndView mav = new ModelAndView("/main");
+    mav.addObject("page", "./member/loginForm"); // ModelAndView는 views까지 보고 main.jsp 기준이므로
+                                                 // ./member폴더로 이동후 찾음
     return mav;
   }
 
   @RequestMapping(value = "/login", method = RequestMethod.POST)
   public ModelAndView login(@RequestParam("id") String id,
       @RequestParam("password") String password, HttpServletRequest request) {
-    ModelAndView mav = new ModelAndView("home");
+    ModelAndView mav = new ModelAndView("/main");
     try {
       memberService.login(id, password);
       HttpSession session = request.getSession();
@@ -44,26 +45,26 @@ public class MemberControllerImpl implements MemberController {
 
   @RequestMapping(value = "/logout")
   public ModelAndView logout(HttpServletRequest request) {
-    ModelAndView mav = new ModelAndView("home");
+    ModelAndView mav = new ModelAndView("/main");
     HttpSession session = request.getSession();
     session.removeAttribute("id");
-    mav.addObject("page", "home");
+    mav.addObject("page", "/home");
     return mav;
   }
 
   @RequestMapping(value = "/join")
   public ModelAndView join() {
-    ModelAndView mav = new ModelAndView("main");
-    mav.addObject("page", "joinForm");
+    ModelAndView mav = new ModelAndView("/main");
+    mav.addObject("page", "./member/joinForm");
     return mav;
   }
 
   @RequestMapping(value = "/join", method = RequestMethod.POST)
   public ModelAndView join(@ModelAttribute Member member) {
-    ModelAndView mav = new ModelAndView("main");
+    ModelAndView mav = new ModelAndView("/main");
     try {
       memberService.join(member);
-      mav.addObject("page", "home");
+      mav.addObject("page", "/home");
     } catch (Exception e) {
       e.printStackTrace();
       mav.addObject("err", e.getMessage());

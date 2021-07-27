@@ -17,6 +17,8 @@ public class Board { // db 컬럼명과 동일!, 컬럼보다 수 많은 건 괜
   private int BOARD_RE_SEQ;
   private int BOARD_READCOUNT;
   private Date BOARD_DATE;
+  // private int BOARD_GRADE;
+
 
   private MultipartFile upfile;
 

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+    <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +12,9 @@
   href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
   rel="stylesheet"
 />
-<link rel="stylesheet" href="../css/home.css" />
-<script src="../js/home.js" defer></script>
+
+<link rel="stylesheet" href="${contextPath}/resources/css/home.css">
+<script src="${contextPath}/resources/js/home.js" defer></script>
 <script
   src="https://kit.fontawesome.com/9eb162ac0d.js"
   crossorigin="anonymous"
