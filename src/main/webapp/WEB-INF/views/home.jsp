@@ -32,7 +32,8 @@
          국제 NLP코칭 사관학교
         </h2>
         <h1 class="home__title">소책자 배포 이벤트<br /></h1> -->
-        <button class="home__btn">나도 받아보기</button>
+        <button class="home__btn" onclick="location='/board/boardlist'">나도 받아보기</button>
+        <button class="home__btn" onclick = "location.href = 'https://www.naver.com/' ">나도 받아보기</button>
       </div>
     </section>
 
