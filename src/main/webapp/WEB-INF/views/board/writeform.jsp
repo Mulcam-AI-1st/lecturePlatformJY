@@ -32,6 +32,8 @@ table {
 </head>
 <body>
 	<!-- 게시판 등록 -->
+	
+<body>
 
 	<section id="./writeForm">
 		<h2>게시판글등록</h2>
@@ -54,13 +56,34 @@ table {
 						id="BOARD_SUBJECT" required="required" /></td>
 				</tr>
 				
-				
-			<div>
-				<label for="BOARD_GRADE"> 
-				<input type="radio" name="sex" value="1" id="1" checked>불만족 1점
-					<input type="radio" name="sex" value="female">여자 
-			</div>
-			
+				<tr>
+                    <td class="td_left"><label for="BOARD_GRADE">평 가</label></td>
+                    <td class="td_right">
+                        <div>
+                            <label for="BOARD_GRADE"> 
+                            <input type="radio" name="BOARD_GRADE" value="1" id="1">1점(불만족)
+                            <input type="radio" name="BOARD_GRADE" value="2" id="2"> 2점
+                            <input type="radio" name="BOARD_GRADE" value="3" id="3"> 3점
+                            <input type="radio" name="BOARD_GRADE" value="4" id="4"> 4점
+                            <input type="radio" name="BOARD_GRADE" value="5" id="5" checked> 5점(매우만족)
+                        </div>
+                    </td>
+                </tr>
+
+				<tr>
+                    <td class="td_left"><label for="BOARD_POINT">포인트</label></td>
+                    <td class="td_right">
+                        <select name="BOARD_POINT" id="BOARD_POINT">
+                            <option value="curi">알찬 커리큘럼</option>
+                            <option value="pro">전문적 유익함</option>
+                            <option value="fun">재미와 몰입</option>
+                            <option value="kind">친절과 정성</option>
+                            <option value="videoQal">높은 영상퀄리티</option>
+                        </select>
+                    </td>
+                </tr>
+
+
 				<tr>
 					<td class="td_left"><label for="BOARD_CONTENT">내 용</label></td>
 					<td><textarea id="BOARD_CONTENT" name="BOARD_CONTENT"
@@ -78,6 +101,14 @@ table {
 			</section>
 		</form>
 	</section>
+
+
+
+    
+</body>
+
+
+
 	<!-- 게시판 등록 -->
 </body>
 </html>
