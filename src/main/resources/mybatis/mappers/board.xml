@@ -29,7 +29,7 @@
 	<select id="selectBoardList" resultType="board" parameterType="int">
 		<![CDATA[  
 		select BOARD_NUM,BOARD_NAME,BOARD_PASS,BOARD_SUBJECT,BOARD_CONTENT, BOARD_FILE, BOARD_GRADE, BOARD_POINT, BOARD_RE_REF,BOARD_RE_LEV,BOARD_RE_SEQ,BOARD_READCOUNT,BOARD_DATE  
-		from (select row_number() over (order by BOARD_RE_REF desc,BOARD_RE_SEQ asc) num, A.* from board A order by BOARD_RE_REF desc,BOARD_RE_SEQ asc) 
+		from (select row_number() over (order by BOARD_RE_REF desc,BOARD_RE_SEQ asc) num, A.* from lboard A order by BOARD_RE_REF desc,BOARD_RE_SEQ asc) 
 		where num between #{startrow} and #{startrow}+10
 		]]>
 
