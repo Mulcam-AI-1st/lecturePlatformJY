@@ -4,13 +4,13 @@
 
 'use strict';
 
-// // Handle click on "contact me" button on home
-// const homeContactBtn = document.querySelector('.home__contact');
-// homeContactBtn.addEventListener('click', () => {
-//   scrollIntoView('#contact');
-// });
+//Handle click on "contact me" button on home
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
+  scrollIntoView('#contact');
+ });
 
-/*// Make home slowly fade to transparent as the window scrolls down
+//Make home slowly fade to transparent as the window scrolls down
 const home = document.querySelector('.home__container');
 const homeRect = home.getBoundingClientRect();
 const homeHeight = home.height;
@@ -26,7 +26,7 @@ document.addEventListener('scroll', () => {
   } else {
     arrowUp.classList.remove('visible');
   }
-});*/
+});
 
 // Handle click on the "arrow up" button
 arrowUp.addEventListener('click', () => {

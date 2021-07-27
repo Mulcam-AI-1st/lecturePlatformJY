@@ -30,7 +30,7 @@
     <section id="contact" class="section">
       <h1 class="contact__title">문의는 카카오 채널톡!</h1>
       <div class="contact__links">
-        <a href="https://github.com/dream-ellie" target="_blank">
+        <a href="http://pf.kakao.com/_CixoNK/chat" target="_blank">
           1:1문의하러 가기 클릭! 
           <i class="fab fa-github"></i>
         </a>

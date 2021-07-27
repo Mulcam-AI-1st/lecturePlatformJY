@@ -102,7 +102,7 @@
       </div>
 
       <div class="work__projects">
-        <a href="" class="project" target="blank" data-type="front-end">
+        <a href="/lecture/lecIntro_1_nlp" class="project" target="blank" data-type="front-end">
           <img
             src="/fileview/homeBook.jpg"
             alt="Youtube"
@@ -215,7 +215,7 @@
         class="testimonial__avatar"
       />
       </div>
-      <button class="testimonial__btn" onclick="location='listform.jsp'">수강생 후기 더보기</button>
+      <button class="testimonial__btn" onclick="location='/board/boardlist'">수강생 후기 더보기</button>
 
     </div>
    </div>

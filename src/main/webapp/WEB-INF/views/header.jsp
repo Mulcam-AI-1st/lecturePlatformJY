@@ -32,7 +32,7 @@
     <nav id="navbar">
       <div class="navbar__logo">
         <i class="fas fa-graduation-cap"></i>
-        <a href="#">국제공인 NLP코칭 사관학교</a>
+        <a href="/main">국제공인 NLP코칭 사관학교</a>
       </div>
       <ul class="navbar__menu">
         <li class="navbar__menu__item active" data-link="#home">홈</li>

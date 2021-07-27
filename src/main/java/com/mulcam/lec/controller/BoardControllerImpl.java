@@ -26,7 +26,7 @@ public class BoardControllerImpl implements BoardController {
   @Override
   @GetMapping("/writeform")
   public String writeform() {
-    return "/board/writeform"; // . 내가 붙였어!!!!
+    return "/board/writeform";
   }
 
   @Override
