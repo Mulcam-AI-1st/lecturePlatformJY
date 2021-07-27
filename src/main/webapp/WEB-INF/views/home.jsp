@@ -214,7 +214,7 @@
         class="testimonial__avatar"
       />
       </div>
-      <button class="testimonial__btn">수강생 후기 더보기</button>
+      <button class="testimonial__btn" onclick="location='listform.jsp'">수강생 후기 더보기</button>
 
     </div>
    </div>

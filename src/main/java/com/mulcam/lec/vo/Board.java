@@ -17,7 +17,9 @@ public class Board { // db 컬럼명과 동일!, 컬럼보다 수 많은 건 괜
   private int BOARD_RE_SEQ;
   private int BOARD_READCOUNT;
   private Date BOARD_DATE;
-  // private int BOARD_GRADE;
+
+  private int BOARD_GRADE;
+  private String BOARD_POINT;
 
 
   private MultipartFile upfile;
@@ -35,6 +37,24 @@ public class Board { // db 컬럼명과 동일!, 컬럼보다 수 많은 건 괜
   public void setUpfile(MultipartFile upfile) {
     this.upfile = upfile;
   }
+
+
+  public int getBOARD_GRADE() {
+    return BOARD_GRADE;
+  }
+
+  public void setBOARD_GRADE(int bOARD_GRADE) {
+    BOARD_GRADE = bOARD_GRADE;
+  }
+
+  public String getBOARD_POINT() {
+    return BOARD_POINT;
+  }
+
+  public void setBOARD_POINT(String bOARD_POINT) {
+    BOARD_POINT = bOARD_POINT;
+  }
+
 
   public int getBOARD_NUM() {
     return BOARD_NUM;

@@ -15,17 +15,17 @@
 
 </head>
 <body>
-
-<article class="join">
+<form action="/member/login" method="post" id="login">
+	<article class="join">	
     <h3>인생을 바꾸는 교육,</h3> 
     <h3>국제공인 NLP코칭 사관학교</h3>
-    <form>
+    
     <div>
-    <input type="text" id="id" placeholder="아이디를 입력하세요">
+    <input type="text" id="id" name="id" placeholder="아이디를 입력하세요">
     </div>
 
     <div>
-    <input type="text" id="password" placeholder="비밀번호를 입력하세요">
+    <input type="text" id="password" name="password" placeholder="비밀번호를 입력하세요">
     </div>
 
 
@@ -33,9 +33,9 @@
     <button>로그인</button>
     </div>
 
-    </form>
-
+   
 </article>
-    
+ </form> 
+   
 </body>
 </html>

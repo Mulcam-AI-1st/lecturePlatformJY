@@ -34,7 +34,7 @@ public class MemberControllerImpl implements MemberController {
       memberService.login(id, password);
       HttpSession session = request.getSession();
       session.setAttribute("id", id);
-      mav.addObject("page", "/home");
+      mav.addObject("page", "home");
     } catch (Exception e) {
       e.printStackTrace();
       mav.addObject("err", e.getMessage());
@@ -48,7 +48,7 @@ public class MemberControllerImpl implements MemberController {
     ModelAndView mav = new ModelAndView("/main");
     HttpSession session = request.getSession();
     session.removeAttribute("id");
-    mav.addObject("page", "/home");
+    mav.addObject("page", "home");
     return mav;
   }
 
@@ -64,7 +64,7 @@ public class MemberControllerImpl implements MemberController {
     ModelAndView mav = new ModelAndView("/main");
     try {
       memberService.join(member);
-      mav.addObject("page", "/home");
+      mav.addObject("page", "home");
     } catch (Exception e) {
       e.printStackTrace();
       mav.addObject("err", e.getMessage());

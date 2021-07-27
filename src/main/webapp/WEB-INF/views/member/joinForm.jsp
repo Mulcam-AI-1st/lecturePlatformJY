@@ -13,48 +13,54 @@
 <link rel="stylesheet" href="${contextPath}/resources/css/joinForm.css">
 <style type="text/css"></style>
 
+
 </head>
 <body>
 
-	<article class="join">
-		<h3>인생을 바꾸는 교육,</h3>
-		<h3>국제공인 NLP코칭 사관학교</h3>
-		<form>
-			<div>
-				<input type="text" id="id" placeholder="아이디를 입력하세요">
-			</div>
 
-			<div>
-				<input type="text" id="password" placeholder="비밀번호를 입력하세요">
-			</div>
+<form action="/member/join" method="post" id="join">	
+	
+   <h3>인생을 바꾸는 교육,</h3> 
+   <h3>국제공인 NLP코칭 사관학교</h3>
 
-			<div>
-				<input type="text" id="name" placeholder="이름을 입력하세요">
-			</div>
+<table border="1">
+	<tr>
+		<td><label for = "id">아이디 : </label></td>
+		<td><input type="text" name="id" id = "id"></td>
+	</tr>
+	<tr>
+		<td><label for = "pass">비밀번호 : </label></td>
+		<td><input type="password" name="password" id = "password"></td>
+	</tr>
+	<tr>
+		<td><label for = "name">이름 : </label></td>
+		<td><input type="text" name="name" id = "name"></td>
+	</tr>
+	<tr>
+		<td><label for = "sex">성별 : </label></td>
+		<td>
+			<input type="radio" name="sex" value="male" id = "sex" checked>남
+			<input type="radio" name="sex" value="female">여
+		</td>
+	</tr>
+	<tr>
+		<td><label for = "age">나이 : </label></td>
+		<td><input type="text" name="age" id = "age"></td>
+	</tr>
+	<tr>
+		<td><label for = "email">이메일주소 : </label></td>
+		<td><input type="text" name="email" id = "email"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<input type="submit" value="가입">
+			<input type="reset" value="다시 작성">
+		</td>
+	</tr>
+</table>
+</form>
 
-			<div>
-				<label for="sex"> <input type="radio" name="sex"
-					value="male" id="sex" checked>남자 <input type="radio"
-					name="sex" value="female">여자 
-			</div>
-
-
-			<div>
-				<input type="text" id="email" placeholder="이메일을 입력하세요">
-			</div>
-
-			<div>
-				<input type="text" id="phone" placeholder="전화번호 입력하세요">
-			</div>
-
-
-			<div class="submit">
-				<button>본인인증 및 회원가입</button>
-			</div>
-
-		</form>
-
-	</article>
 
 </body>
 </html>

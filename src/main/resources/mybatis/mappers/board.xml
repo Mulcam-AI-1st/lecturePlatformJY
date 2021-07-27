@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+							"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mulcam.lec.dao.BoardDAO">
+	
+	<select id="selectMaxBoardNum" resultType="int">
+		<![CDATA[
+		select nvl(max(board_num),0) from lboard
+		]]>
+	</select>
+	
+	
+	<insert id="insertBoard" parameterType="board"> <!-- board: vo @Component덕분에 경로생략 가능, 객체는 vo명과 동일해야(대문자이면 #{대문자}) -->
+	
+		<![CDATA[
+		insert into lboard 
+		(BOARD_NUM,BOARD_NAME,BOARD_PASS,BOARD_SUBJECT,BOARD_CONTENT, BOARD_FILE, BOARD_GRADE, BOARD_POINT, BOARD_RE_REF,BOARD_RE_LEV,BOARD_RE_SEQ,BOARD_READCOUNT,BOARD_DATE)
+		values(#{BOARD_NUM},#{BOARD_NAME},#{BOARD_PASS},#{BOARD_SUBJECT},#{BOARD_CONTENT}, #{BOARD_FILE}, #{BOARD_GRADE}, #{BOARD_POINT}, #{BOARD_RE_REF},#{BOARD_RE_LEV},
+			#{BOARD_RE_SEQ},#{BOARD_READCOUNT},sysdate)
+		]]>
+	</insert>
+	
+	<select id="selectBoardCount" resultType="int">
+		<![CDATA[
+		select count(*) from lboard
+		]]>
+	</select>
+	
+	<select id="selectBoardList" resultType="board" parameterType="int">
+		<![CDATA[  
+		select BOARD_NUM,BOARD_NAME,BOARD_PASS,BOARD_SUBJECT,BOARD_CONTENT, BOARD_FILE, BOARD_GRADE, BOARD_POINT, BOARD_RE_REF,BOARD_RE_LEV,BOARD_RE_SEQ,BOARD_READCOUNT,BOARD_DATE  
+		from (select row_number() over (order by BOARD_RE_REF desc,BOARD_RE_SEQ asc) num, A.* from board A order by BOARD_RE_REF desc,BOARD_RE_SEQ asc) 
+		where num between #{startrow} and #{startrow}+10
+		]]>
+
+	</select>
+	
+	<select id="selectBoard" resultType="board"  parameterType="int">
+	<![CDATA[
+	select * from lboard where board_num=#{board_num}
+	]]>
+	</select>
+	
+	<update id="updateReadCount" parameterType="int">
+		<![CDATA[
+		update lboard set BOARD_READCOUNT=BOARD_READCOUNT+1 where BOARD_NUM=#{board_num}
+		]]>
+	</update>
+	
+	<!-- 원글은 바뀌면 안되므로 BOARD_RE_SEQ>#{BOARD_RE_SEQ} -->
+	<update id="updateBoardReSeq" parameterType="board">
+	<![CDATA[
+	update lboard set BOARD_RE_SEQ=BOARD_RE_SEQ+1 
+	where BOARD_RE_REF=#{BOARD_RE_REF} and BOARD_RE_SEQ>#{BOARD_RE_SEQ}
+	]]>
+	</update>
+	
+	<select id="selectPassword" resultType="String"  parameterType="int">
+	<![CDATA[
+	select BOARD_PASS from lboard where board_num=#{board_num}
+	]]>
+	</select>
+	
+	
+	<!-- 파라미터 객체면 #{객체변수명 대문자면 대문자 맞춰줌} / 변수면 DAO 변수명과 맞춰줌 -->
+	<update id="updateBoard" parameterType="board">
+	<![CDATA[
+	update lboard set BOARD_SUBJECT=#{BOARD_SUBJECT}, BOARD_CONTENT=#{BOARD_CONTENT}
+	where BOARD_NUM=#{BOARD_NUM}
+	]]>
+	</update>
+	
+	<select id="deleteBoard" parameterType="int">
+	<![CDATA[
+	delete from lboard where board_num=#{board_num}
+	]]>
+	</select>
+
+
+</mapper>

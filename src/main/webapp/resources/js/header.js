@@ -30,6 +30,11 @@ navbarMenu.addEventListener('click', (event) => { //메뉴 클릭시 이벤트 �
   scrollIntoView(link); //타겟 링크로 스크롤 이동
 });
 
+
+
+
+
+
 // Navbar toggle button for small screen
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 navbarToggleBtn.addEventListener('click', () => {
