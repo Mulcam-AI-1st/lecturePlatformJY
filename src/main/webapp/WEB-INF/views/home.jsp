@@ -104,13 +104,13 @@
       <div class="work__projects">
         <a href="/lecture/lecIntro" class="project" target="blank" data-type="front-end">
           <img
-            src="/fileview/homeBook.jpg"
+            src="/fileview/thumbnail01.jpg"
             alt="Youtube"
             class="project__img"
           />
           <div class="project__description">
             <h3>국제공인 자격과정</h3>
-            <span>NLP프랙티셔너</span>
+            <span>NLP프랙티셔너1</span>
           </div>
         </a>
 
@@ -122,12 +122,12 @@
         >
           <img
             class="project__img"
-            src="imgs/lectures/타이틀2.jpg"
+            src="/fileview/thumbnail01.jpg"
             alt="navbar"
           />
           <div class="project__description">
             <h3>국제공인 자격과정</h3>
-            <span>NLP 마스터 프랙티셔너</span>
+            <span>NLP 마스터 프랙티셔너2</span>
           </div>
         </a>
 
@@ -137,43 +137,43 @@
           data-type="front-end"
           target="blank"
         >
-          <img class="project__img" src="imgs/lectures/타이틀2.jpg" alt="navbar" />
+          <img class="project__img" src="/fileview/thumbnail01.jpg" alt="navbar" />
           <div class="project__description">
             <h3>국제공인 자격과정</h3>
-            <span>MBST 프랙티셔너</span>
+            <span>MBST 프랙티셔너3</span>
           </div>
         </a>
 
         <a href="/lecture/lecIntro" class="project" data-type="back-end">
-          <img class="project__img" src="imgs/lectures/1.JPG" alt="" />
+          <img class="project__img" src="/fileview/thumbnail11.jpg" alt="" />
           <div class="project__description">
             <h3>Project</h3>
             <span>Explanation</span>
           </div>
         </a>
         <a href="" class="project" data-type="back-end">
-          <img class="project__img" src="imgs/lectures/2.JPG" alt="" />
+          <img class="project__img" src="/fileview/thumbnail12.jpg" alt="" />
           <div class="project__description">
             <h3>Project</h3>
             <span>Explanation</span>
           </div>
         </a>
         <a href="/lecture/lecIntro" class="project" data-type="mobile">
-          <img class="project__img" src="imgs/lectures/3.JPG" alt="" />
+          <img class="project__img" src="/fileview/thumbnail13.jpg" alt="" />
           <div class="project__description">
             <h3>Project</h3>
             <span>Explanation</span>
           </div>
         </a>
         <a href="/lecture/lecIntro" class="project" data-type="mobile">
-          <img class="project__img" src="imgs/lectures/4.JPG" alt="" />
+          <img class="project__img" src="/fileview/thumbnail14.jpg" alt="" />
           <div class="project__description">
             <h3>Project</h3>
             <span>Explanation</span>
           </div>
         </a>
         <a href="/lecture/lecIntro" class="project" data-type="mobile">
-          <img class="project__img" src="imgs/lectures/1.JPG" alt="" />
+          <img class="project__img" src="/fileview/thumbnail11.jpg" alt="" />
           <div class="project__description">
             <h3>Project</h3>
             <span>Explanation</span>

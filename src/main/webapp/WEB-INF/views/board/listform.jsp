@@ -238,7 +238,7 @@ body {
     <div class="blog-card">
         <div class="meta">
          <!--  <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div> -->
-          <div class="photo"> </div> <img src="/fileview/${file.originalFilename }"/> </div>
+          <div class="photo"><img src="/board/fileview/${article.BOARD_FILE}"/> </div>
           <ul class="details">
             <li class="author"><a href="#">${article.BOARD_NAME }</a></li>
             <li class="date">${article.BOARD_DATE}</li>
