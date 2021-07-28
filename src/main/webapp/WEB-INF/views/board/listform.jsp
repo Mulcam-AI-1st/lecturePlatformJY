@@ -237,15 +237,16 @@ body {
 
     <div class="blog-card">
         <div class="meta">
-          <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+         <!--  <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div> -->
+          <div class="photo"> </div> <img src="/fileview/${file.originalFilename }"/> </div>
           <ul class="details">
             <li class="author"><a href="#">${article.BOARD_NAME }</a></li>
             <li class="date">${article.BOARD_DATE}</li>
             <li class="tags">
               <ul>
-                <li><a href="#">5점</a></li>
-                <li><a href="#">${article.BOARD_READCOUNT } views</a></li>
-                <li><a href="#">알찬강의</a></li>
+                <li><a href="#">${article.BOARD_GRADE}점</a></li>
+                <li><a href="#">${article.BOARD_READCOUNT} views</a></li>
+                <li><a href="#">${article.BOARD_POINT}</a></li>
               </ul>
             </li>
           </ul>

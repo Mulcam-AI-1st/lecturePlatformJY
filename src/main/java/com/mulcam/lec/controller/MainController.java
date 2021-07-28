@@ -23,7 +23,7 @@ public class MainController {
     return mav;
   }
 
-  @GetMapping("/fileview/{filename}")
+  @GetMapping("/fileview/{filename}") // getRealPath("/uploadBoard/"); 폴더에 클라이언트가 업로드한 파일 저장해
   public void fileview(@PathVariable String filename, HttpServletRequest request,
       HttpServletResponse response) {
     String path = request.getServletContext().getRealPath("/uploadHome/");

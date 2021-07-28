@@ -33,7 +33,7 @@ public class BoardControllerImpl implements BoardController {
   @PostMapping("/boardwrite")
   public ModelAndView boardWrite(@ModelAttribute Board board, MultipartHttpServletRequest multi) {
     ModelAndView mv = new ModelAndView();
-    String path = multi.getServletContext().getRealPath("/uploadLecture/");
+    String path = multi.getServletContext().getRealPath("/uploadBoard/");
     try {
       MultipartFile orgfile = multi.getFile("upfile");
       File destFile = new File(path + orgfile.getOriginalFilename());
