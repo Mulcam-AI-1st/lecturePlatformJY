@@ -102,7 +102,7 @@
       </div>
 
       <div class="work__projects">
-        <a href="/lecture/lecIntro_1_nlp" class="project" target="blank" data-type="front-end">
+        <a href="/lecture/lecIntro" class="project" target="blank" data-type="front-end">
           <img
             src="/fileview/homeBook.jpg"
             alt="Youtube"
@@ -115,7 +115,7 @@
         </a>
 
         <a
-          href="https://github.com/dream-ellie/responsive-nav-bar"
+          href="/lecture/lecIntro"
           class="project"
           data-type="front-end"
           target="blank"
@@ -132,7 +132,7 @@
         </a>
 
         <a
-          href="https://github.com/dream-ellie/responsive-nav-bar"
+          href="/lecture/lecIntro"
           class="project"
           data-type="front-end"
           target="blank"
@@ -144,7 +144,7 @@
           </div>
         </a>
 
-        <a href="" class="project" data-type="back-end">
+        <a href="/lecture/lecIntro" class="project" data-type="back-end">
           <img class="project__img" src="imgs/lectures/1.JPG" alt="" />
           <div class="project__description">
             <h3>Project</h3>
@@ -158,21 +158,21 @@
             <span>Explanation</span>
           </div>
         </a>
-        <a href="" class="project" data-type="mobile">
+        <a href="/lecture/lecIntro" class="project" data-type="mobile">
           <img class="project__img" src="imgs/lectures/3.JPG" alt="" />
           <div class="project__description">
             <h3>Project</h3>
             <span>Explanation</span>
           </div>
         </a>
-        <a href="" class="project" data-type="mobile">
+        <a href="/lecture/lecIntro" class="project" data-type="mobile">
           <img class="project__img" src="imgs/lectures/4.JPG" alt="" />
           <div class="project__description">
             <h3>Project</h3>
             <span>Explanation</span>
           </div>
         </a>
-        <a href="" class="project" data-type="mobile">
+        <a href="/lecture/lecIntro" class="project" data-type="mobile">
           <img class="project__img" src="imgs/lectures/1.JPG" alt="" />
           <div class="project__description">
             <h3>Project</h3>

@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+
+:root {
+  /* color */
+  --white-color: #f0f4f5;
+  --black-color: #140a00;
+  --blue-dark-color: #263343;
+  --blue-color: #045fd4;
+  --sky-dark-color: #2362ad;
+  --sky-color: #259ee2;
+  --red-color: #ff0000;
+  --orange-color: #d49466;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+  --yellow-color: #fbce0b;
+
+  /* size */
+  --side-padding: 12px;
+  --tag-padding: 5px;
+  --side4-padding: 12px 12px;
+  --avatar-size: 36px;
+
+  /* font size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+  --font-icons: 16px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--side4-padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+header .logo {
+  font-size: var(--font-large);
+}
+
+header .logo i {
+  color: var(--red-color);
+}
+
+header .icons .fa-search {
+  margin-right: var(--side-padding);
+}
+
+/* section_player */
+.player {
+  /* position: sticky; */
+  top: 0;
+  text-align: center;
+  background-color: var(--black-color);
+}
+
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+/* section_video info */
+body > .info {
+  padding: var(--side-padding);
+}
+
+/* info > medadata */
+
+.info .metadata .hashtags {
+  display: flex;
+  color: var(--blue-color);
+  font-size: var(--font-small);
+}
+
+.info .metadata .hashtags li {
+  margin-right: var(--tag-padding);
+}
+
+.info .metadata .titleAndButton {
+  display: flex;
+}
+
+.info .metadata .titleAndButton .title {
+  font-size: large;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-right: var(--side-padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+  height: 100%;
+  font-size: var(--font-large);
+}
+
+.info .metadata .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+/* info > action */
+.info .actions {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--side-padding) 0;
+}
+
+.info .actions button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.info .actions button i {
+  margin: 0 auto;
+  margin-bottom: calc(var(--side-padding) / 2);
+  font-size: var(--font-icons);
+}
+
+.info .actions button .active-y {
+  color: var(--yellow-color);
+}
+
+.info .actions button .active-b {
+  color: var(--blue-color);
+}
+
+/* info > channel */
+.info .channel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+  padding: var(--side-padding);
+  margin-top: var(--side-padding);
+}
+
+.info .channel .metadata {
+  display: flex;
+  align-items: center;
+}
+
+.info .channel .metadata img {
+  width: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.info .channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info .channel .metadata .info .tName {
+  font-size: var(--font-medium);
+}
+
+.info .channel .metadata .info .tNic {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info .channel .subscribe button {
+  font-size: var(--font-small);
+  color: var(--sky-dark-color);
+  padding: 5px;
+  border: 1px solid;
+}
+
+/* upNext */
+
+.upNext {
+  padding: 0 var(--side-padding);
+}
+
+.upNext .title {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+  margin-bottom: var(--side-padding);
+}
+
+.upNext .item {
+  display: flex;
+}
+
+.upNext .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--side-padding);
+}
+
+.upNext .item .img img {
+  width: 100%;
+}
+
+.upNext .item .imgInfo {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.upNext .item .imgInfo .vtitle {
+  font-size: var(--font-medium);
+}
+
+.upNext .item .imgInfo .cName,
+.upNext .item .imgInfo .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.upNext .item .moreBtn {
+  flex: 1 1 5%;
+  height: 100%;
+  font-size: var(--font-medium);
+  margin-top: 5px;
+}
+
+.infoAndUpNext {
+  display: flex;
+  flex-direction: column;
+  margin: var(--side4-padding);
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndUpNext {
+    flex-direction: row;
+  }
+}

@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>footer</title>
+<title>header</title>
 <link rel="icon" type="image/png" href="imgs/favicon.png" />
 <link
   href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
@@ -35,7 +35,9 @@
         <a href="/main">국제공인 NLP코칭 사관학교</a>
       </div>
       <ul class="navbar__menu">
-        <li class="navbar__menu__item active" data-link="#home">홈</li>
+        <li class="navbar__menu__item active" 
+        onclick="location='/'"
+        data-link="#home">홈</li>
         <li class="navbar__menu__item" data-link="#intro">소개</li>
         <li class="navbar__menu__item" data-link="#lecture">강의</li>
         <li class="navbar__menu__item" data-link="#testimonials">후기</li>
