@@ -17,7 +17,7 @@
 />
 
 <link rel="stylesheet" href="${contextPath}/resources/css/header.css">
-<script src="${contextPath}/resources/js/header.js" defer></script>
+<script src="${contextPath}/resources/js/main.js" defer></script>
 <script
   src="https://kit.fontawesome.com/9eb162ac0d.js"
   crossorigin="anonymous"

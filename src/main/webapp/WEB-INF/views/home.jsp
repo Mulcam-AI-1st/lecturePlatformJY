@@ -14,13 +14,13 @@
 />
 
 <link rel="stylesheet" href="${contextPath}/resources/css/home.css">
-<script src="${contextPath}/resources/js/home.js" defer></script>
+<script src="${contextPath}/resources/js/main.js" defer></script>
 <script
   src="https://kit.fontawesome.com/9eb162ac0d.js"
   crossorigin="anonymous"
 ></script>
-</head>
 
+</head>
 
 
 <body>
